@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Буровые и свайные работы</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="main_wrap">
+      <div class="header_contacts">
+        <div class="container descr__box">
+          <div class="header_menu">
+            <a id="top" href="index.html"><img class='logo' src="assets/img/logo.png" alt="logo" /></a>
+            <a href="signup.html">Регистрация</a>
+            <a href="contacts.html"><img src="assets/img/address-book.svg" alt="address-book" /></a>
+          </div>
+          <div class="header_descr_contacts">
+            <h1 class="h1header_contacts">Contact Us</h1>
+            <p class="text main_descr_contacts">Краткая выдержка с информацией о сайте: <br /> Lorem ipsum dolor sit
+              amet
+              consectetur, adipisicing elit. Dolore iure quia vitae itaque omnis nemo praesentium sed id quo impedit,
+              aut
+              ipsum asperiores? Doloribus nisi optio assumenda error, natus sint!</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="main_contacts container">
+        <div class="contact_block">
+          <div class="my_contact">
+            <img class="main_img" src="assets/img/girl_contacts.svg" alt="">
+            <h4 class="h4color">Address</h4>
+            <p class="text mb32">Республика Беларусь, г. Минск</p>
+            <h4 class="h4color">Phone</h4>
+            <ul class="list_tel">
+              <li>+375 33 111-11-11</li>
+              <li>+375 29 111-11-11</li>
+            </ul>
+            <h4 class="h4color">Online sevice</h4>
+            <ul class="list">
+              <li>https://github.com/Zlandars/homework</li>
+              <li>zland@bntu.by</li>
+              <li>Если возникнут вопросы, пишите в телеграмм @zhland</li>
+            </ul>
+          </div>
+          <div class="sender">
+            <h4 class="h4color">Send as message</h4>
+            <form class="form_style" action="sendUsMessage" method="post">
+              <label for="Full name">Full name</label>
+              <input type="text" id="Full name" value="" placeholder="Enter Full Name" required />
+              <br />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter email" required />
+              <br />
+              <label for="Message">Message</label>
+              <textarea name="" id="Message" cols="30" rows="4" placeholder="Enter your message" required></textarea>
+              <br />
+              <button type="submit">Send Message</button>
+              <button type="reset">Clear input</button>
+            </form>
+          </div>
+        </div>
+
+
+
+
+
+        <hr />
+        <p>iFrame - маленькая высота из-за того, что скроллом на малых размерах окна не выйдет пройти дальше</p>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A2474d995bb9a7c69e77613b341ba88b52ece23416e22fb15cb438ce243c91b00&amp;source=constructor"
+          width="100%" height="100px" frameborder="0"></iframe>
+        <hr />
+        <p>Js - поленился переделывать на яндексе ссылку, а жесткая замена в коде ссылке ломает карту.</p>
+        <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2474d995bb9a7c69e77613b341ba88b52ece23416e22fb15cb438ce243c91b00&amp;width=500&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="honeymoon">
+            <h3>Реквизиты:</h3>
+            <p>
+              р/с: BY92ALFA301430C2450010270000 AlfaBank
+              <strong>Собираю на медовый месяц</strong>
+            </p>
+          </div>
+          <hr />
+          <div class="footer_down">
+            <h3 class="h3center">Контактные данные</h3>
+            <div class="contacts">
+              <div class="contact">Если возникнут вопросы, пишите в телеграмм @zhland</div>
+              <div class="contact">если в телеге несколько человек с таким ником</div>
+              <div class="contact">хорошо проверьте полное совпадение или пишите на почту zland@bntu.by</div>
+            </div>
+            <a href="#top">Вверх</a>
+            <p>&copy; Все права защищены</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
