@@ -92,13 +92,13 @@ body {
   opacity: 0.8;
 }
 .i1 {
-  background: url("/assets/img/icon-1.png") no-repeat center center / 100%;
+  background: url("../../assets/img/icon-1.png") no-repeat center center / 100%;
 }
 .i2 {
-  background: url("/assets/img/icon-2.png") no-repeat center center / 100%;
+  background: url("../../assets/img/icon-2.png") no-repeat center center / 100%;
 }
 .i3 {
-  background: url("/assets/img/icon-3.png") no-repeat center center / 100%;
+  background: url("../../assets/img/icon-3.png") no-repeat center center / 100%;
 }
 
 .main {
