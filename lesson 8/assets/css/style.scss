@@ -231,11 +231,11 @@ body {
 .form_style {}
 
 .main_contacts {
-  margin: 57px 214px 64px;
+  margin: 57px auto 64px;
 }
 
 .main_img {
-  margin: 32px 100px 32px 0;
+  margin: 32px auto;
 }
 
 .list {
@@ -267,6 +267,7 @@ li {
   flex-grow: 1;
   padding: 56px;
   margin-bottom: 96px;
+  margin: 16px;
 
   .form__label {
     font-size: 16px;
@@ -284,6 +285,7 @@ li {
     border-radius: 10px;
     margin-bottom: 32px;
     padding: 20px;
+    width: 100%;
   }
 
   .form__button__flex {
@@ -491,6 +493,11 @@ a:hover {
   flex-grow: 1;
   padding-left: 30px;
 }
+@media (max-width: 1445px) {
+  .my_contact {
+    text-align: center;
+  }
+}
 
 @media (max-width: 1024px) {
   .descr__box {
@@ -504,7 +511,6 @@ a:hover {
 
   .header_menu_contacts {
     padding: 15px;
-
     margin: 0 0 120px;
   }
 
@@ -569,10 +575,6 @@ a:hover {
 
   .map {
     padding-bottom: 64px;
-  }
-
-  .my_contact {
-    text-align: center;
   }
 }
 
