@@ -126,14 +126,16 @@ $mark_color: #F16D7F;
     color: $mark_color;
 }
 
-@media (max-width: 812px) {
-    .main_top img {
-        display: none;
-    }
+.main_wrap {
+    max-width: 1140px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    margin: auto;
 }
 
 .main_sales {
-    max-width: 1140px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 180px;
@@ -219,15 +221,17 @@ $mark_color: #F16D7F;
 
 .main_prod {
     display: grid;
-    width: 1140px;
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(581px, 1fr);
+    grid-template-rows: minmax(1fr, 581px);
     grid-gap: 30px;
+    margin: 18px;
 
     .main_prod_element {
         background: #F8F8F8;
-
+        img {
+            width: 100%;
+        }
         .main_prod_element_descr {
             /* Здесь грид только для интервала */
             display: grid;
@@ -275,55 +279,55 @@ $mark_color: #F16D7F;
 
     background: #222224;
 
-    .wrap {
-        width: 1140px;
-        margin: 104px auto;
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-
-        .main_bottom_element {
-            flex-grow: 1;
-            padding: 0 10px;
-        }
-
-        .sozials {
-            margin: 0 auto;
-            height: 40px;
-            width: 40px;
-        }
-
-        .sozials_1 {
-            background: url('/Assets/img/main_bottom_1.png') no-repeat center center/100%;
-        }
-
-        .sozials_2 {
-            background: url('/Assets/img/main_bottom_2.png') no-repeat center center/100%;
-        }
-
-        .sozials_3 {
-            background: url('/Assets/img/main_bottom_3.png') no-repeat center center/100%;
-        }
-
-        h4 {
-            font-weight: normal;
-            font-size: 19.96px;
-            line-height: 24px;
-            color: #FBFBFB;
-            margin: 16px;
-        }
-
-        span {
-            font-weight: 300;
-            font-size: 13.972px;
-            line-height: 17px;
-            text-align: center;
-            color: #FBFBFB;
-        }
-    }
+    
 
 }
+.wrap {
+    max-width: 1140px;
+    margin: 104px auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 
+    .main_bottom_element {
+        flex-grow: 1;
+        padding: 50px 10px;
+    }
+
+    .sozials {
+        margin: 0 auto;
+        height: 40px;
+        width: 40px;
+    }
+
+    .sozials_1 {
+        background: url('/Assets/img/main_bottom_1.png') no-repeat center center/100%;
+    }
+
+    .sozials_2 {
+        background: url('/Assets/img/main_bottom_2.png') no-repeat center center/100%;
+    }
+
+    .sozials_3 {
+        background: url('/Assets/img/main_bottom_3.png') no-repeat center center/100%;
+    }
+
+    h4 {
+        font-weight: normal;
+        font-size: 19.96px;
+        line-height: 24px;
+        color: #FBFBFB;
+        margin: 16px;
+    }
+
+    span {
+        font-weight: 300;
+        font-size: 13.972px;
+        line-height: 17px;
+        text-align: center;
+        color: #FBFBFB;
+    }
+}
 .footer_subscribe {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -333,12 +337,13 @@ $mark_color: #F16D7F;
     /* opacity не получается на фоновую картинку кинуть background: url('/Assets/img/footer_background.png') no-repeat center center/100%; */
     /* поздно в макете заметил, как сделать проще... Оставляю по-своему */
     position: relative;
-
+    background: rgba(244, 244, 244, 0.7);
 }
-
+/* Если поставить на картинку максимальную высоту (получается красиво), ломается адаптив. */
 .bgopacity {
+    max-width: 100%;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     opacity: 0.5;
     z-index: -1;
@@ -346,7 +351,7 @@ $mark_color: #F16D7F;
 
 .footer_subscribe_left {
     /* flex-grow: 1; */
-    margin-top: 100px;
+    margin: 100px 18px 0;
     text-align: center;
 
     .footer_subscribe_left_descr {
@@ -357,19 +362,18 @@ $mark_color: #F16D7F;
 
 .footer_subscribe_right {
     /* flex-grow: 1; */
-    margin-top: 150px;
+    margin: 150px 18px 0 0;
     text-align: center;
 }
 
 .form_subscr {
     margin: 30px;
-
     input {
         border: none;
         border-radius: 10px;
         outline: none;
         height: 50px;
-        width: 250px;
+        max-width: 250px;
         -webkit-appearance: none;
         vertical-align: middle;
     }
@@ -444,5 +448,21 @@ $mark_color: #F16D7F;
 @media (max-width: 1200px) {
     .main_prod {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 812px) {
+    .main_top img {
+        display: none;
+    }
+    .wrap {
+        flex-direction: column;
+        max-width: 360px;
+    }
+    .footer_subscribe {
+        display: block;
+        min-height: auto;
+        .footer_subscribe_right {
+            margin-top: 50px;
+        }
     }
 }
